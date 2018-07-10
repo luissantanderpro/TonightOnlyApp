@@ -1,0 +1,28 @@
+dependencies: \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTModuleMethod.mm \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTModuleMethod.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTBridgeMethod.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTNullability.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTCxxConvert.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTManagedPointer.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Base/RCTParserUtils.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/React/Profiler/RCTProfile.h

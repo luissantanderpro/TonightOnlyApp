@@ -1,0 +1,10 @@
+dependencies: \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/Libraries/Network/RCTFileRequestHandler.m \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/node_modules/react-native/Libraries/Network/RCTFileRequestHandler.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestHandler.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestDelegate.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/lsantanderprox/Desktop/TonightOnlyApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h
