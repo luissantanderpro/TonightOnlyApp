@@ -13,6 +13,8 @@ import MainScreen           from './containers/MainScreen';
 import AllEventsScreen      from './containers/AllEventsScreen'; 
 import CityEventsScreen     from './containers/CityEventsScreen'; 
 import EventVenueInfoScreen from './containers/EventVenueInfoScreen'; 
+import VenueInfoScreen      from './containers/VenueInfoScreen'; 
+import ArtistInfoScreen     from './containers/ArtistInfoScreen'; 
 
 export default class App extends React.Component {
   render() {
@@ -22,7 +24,9 @@ export default class App extends React.Component {
         main:       { screen: MainScreen },
         allEvents:  { screen: AllEventsScreen },
         cityEvents: { screen: CityEventsScreen }, 
-        eventInfo:  { screen: EventVenueInfoScreen }
+        eventInfo:  { screen: EventVenueInfoScreen },
+        venueInfo:  { screen: VenueInfoScreen },
+        artistInfo: { screen: ArtistInfoScreen }
     });
 
     // Render the main Navigator to navigate between screens 

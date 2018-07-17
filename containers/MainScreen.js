@@ -35,13 +35,17 @@ class MainScreen extends Component {
 		// Navigate to the next 
 		switch (choice) {
 			case 'allEvents':
-				navigate('allEvents', { headerTitle: 'All Events' });
+				navigate('allEvents');
 			break;
 			default:
 				navigate('cityEvents', { headerTitle: choice }); 
 			break;
 		}
 	}	
+	
+	changeDisplayChoiceField = (choice) => {
+		this.setState({displayChoice: choice});
+	}
 
 	render() {
 		return (

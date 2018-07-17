@@ -6,9 +6,11 @@ import { View,
 		 TouchableOpacity,
 		 StyleSheet,
 		 Dimensions,
+		 Linking
 	   }         			   from 'react-native'; 
 import ImageSlider             from 'react-native-image-slider';
-
+import LinearGradient          from 'react-native-linear-gradient';
+import { Icon }				   from 'react-native-elements'; 
 
 const SCREEN_WIDTH = Dimensions.get('window').width; 
 
@@ -32,6 +34,9 @@ const tempImages = [
 	'https://placeimg.com/640/640/nature'
 ]
 
+const testURL = 'https://soundcloud.com/getterofficial/throwin-elbows-getter-virtual-riot-remix'; 
+const buyTicketsTestURL = 'http://exchangela.electrostub.com/event.cfm?id=147387'; 
+// ----------------------------------------------------------------------------
 
 class EventVenueInfoScreen extends Component {
 	static navigationOptions = ({ navigation }) => ({
@@ -53,10 +58,11 @@ class EventVenueInfoScreen extends Component {
 	}
 
 	render() {
-
-
 		return (
-			<View style={ styles.container } >
+			<LinearGradient 
+				colors={['#010812', '#222246', '#67286b', '#b90e6e', '#fe0b4c']} 
+				start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
+				style={ styles.container } >
 				<ImageSlider 
 					loopBothSides
 					autoPlayWithInterval={3000}
@@ -64,46 +70,77 @@ class EventVenueInfoScreen extends Component {
 				/>
 				<View style={styles.venueInfoStyle}>
 					<View style={styles.venueBox1}>
-						<Text>Box 1</Text>
+						<Text style={styles.textStyle}>Los Angeles, CA</Text>
+						<Text style={styles.textStyle}>Exchange LA</Text>
+						<Text style={styles.textStyle}>10:00 PM - Close</Text>
 					</View>
 					<View style={styles.venueBox2}>
-						<Text>Box 2</Text>
+						<Text style={styles.textStyle}>Saturday</Text>
+						<Text style={styles.textStyle}>July 20th</Text>
+						<Text style={styles.textStyle}>2018</Text>
 					</View>
 				</View>
 				<View style={styles.venueArtistInfoStyle}>
-					<Text>Internal Info</Text>
+					<View style={styles.socialMediaIconsStyle}>
+						<TouchableOpacity>
+							<Icon 
+								name="youtube-square" 
+								type="font-awesome"
+								color="#fff"
+								size={70}
+							/>
+						</TouchableOpacity>
+						<TouchableOpacity onPress={() => Linking.openURL(testURL)}>
+							<Icon 
+								name="soundcloud" 
+								type="font-awesome"
+								color="#fff"
+								size={70}
+							/>
+						</TouchableOpacity>
+						<TouchableOpacity>
+							<Icon 
+								name="vine" 
+								type="font-awesome"
+								color="#fff"
+								size={70}
+							/>
+						</TouchableOpacity>
+					</View>
 				</View>
-				<TouchableOpacity style={styles.buttonStyle} onPress={() => {}}>
+				<TouchableOpacity style={styles.buttonStyle} onPress={() => Linking.openURL(buyTicketsTestURL)}>
 					<Text style={{color: "#fff"}}>Buy Tickets</Text>
 				</TouchableOpacity>
-			</View>
+			</LinearGradient>
 		); 
 	}
 }
-
+// background-image: linear-gradient(to right bottom, #010812, #222246, #67286b, #b90e6e, #fe0b4c);
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		justifyContent: 'space-between',
-		backgroundColor: 'white'
+		backgroundColor: 'black'
 	},
 	venueInfoStyle: {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-		margin: 10,
-		borderWidth: 2,
-		borderColor: 'red' 
+		margin: 10
 	},
 	venueBox1: {
 		width:  175,
 		height: 100,
-		backgroundColor: 'pink'
+		backgroundColor: 'black',
+		justifyContent: 'center',
+		alignItems: 'center'
 	},
 	venueBox2: {
 		width: 150,
 		height: 100,
-		backgroundColor: 'blue'
+		backgroundColor: 'black',
+		justifyContent: 'center',
+		alignItems: 'center'
 	},
 	venueArtistInfoStyle: {
 		height: 175, 
@@ -111,18 +148,28 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between',
 		margin: 10,
 		borderWidth: 2,
-		borderColor: 'red'
+		backgroundColor: 'black'
+	},
+	socialMediaIconsStyle: {
+		width: '100%',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		flexDirection: 'row',
+		padding: 15
 	},
 	buttonStyle: {
 		height: 75,
 		margin: 10,
 		borderWidth: 3,
 		borderColor: 'white',
-		borderRadius: 5,
+		borderRadius: 15,
 		justifyContent: 'center',
 		alignItems: 'center',
 		padding: 5,
 		backgroundColor: 'black'
+	},
+	textStyle: {
+		color: '#fff' 
 	}
 });
 

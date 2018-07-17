@@ -8,6 +8,10 @@
 		<data>
 		W5eRWEn3QY0z2S8QthX0CwIYi/s=
 		</data>
+		<key>FontAwesome.ttf</key>
+		<data>
+		E7HqtlqYPHpzvHmXxHnWaUP3xss=
+		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
 		ooz0sIAaLKBGoFU5iKq8DR11NmY=
@@ -51,7 +55,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tRaKVtcwWaDuWqCnYcd2v8tmNJg=
+		wyfXan8WBuYYwud2WVZiKGrdzEQ=
 		</data>
 		<key>MaterialIcons.ttf</key>
 		<data>
@@ -93,6 +97,17 @@
 			<key>hash2</key>
 			<data>
 			t+FKh9DbQ1injRawAwSsoIyJq9w04dqGlySKlAo7G2U=
+			</data>
+		</dict>
+		<key>FontAwesome.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			E7HqtlqYPHpzvHmXxHnWaUP3xss=
+			</data>
+			<key>hash2</key>
+			<data>
+			qljzPyOaD7AvXHpsRcBD16msmgkzNYBmlOzW1O3A1qg=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
