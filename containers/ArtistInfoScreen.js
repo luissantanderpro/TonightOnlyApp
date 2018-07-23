@@ -16,6 +16,7 @@ import { Icon }				   from 'react-native-elements';
 const SCREEN_WIDTH = Dimensions.get('window').width; 
 
 // Temporary Assignment of Events Matrix 
+// ----------------------------------------------------------------------------
 const listOfEvents = [{month: 'August 2018', 
  					   info: ['Aug. 4th | Hard Summer 2018 ',
  					   		  'Aug. 10th  | Timmy Trumpet at Academy LA',
@@ -37,7 +38,6 @@ const tempImages = [
 
 const testURL = 'https://soundcloud.com/getterofficial/throwin-elbows-getter-virtual-riot-remix'; 
 const buyTicketsTestURL = 'http://exchangela.electrostub.com/event.cfm?id=147387'; 
-
 // ----------------------------------------------------------------------------
 
 class ArtistInfoScreen extends Component {
@@ -53,10 +53,6 @@ class ArtistInfoScreen extends Component {
 
 	constructor(props) {
 		super(props);
-		// const { eventIndex, event } = this.props.navigation.state.params;
-
-		// console.log(eventIndex, event);
-
 	}
 
 	render() {
@@ -73,10 +69,17 @@ class ArtistInfoScreen extends Component {
 						<Text style={styles.textStyle}>Saturday</Text>
 						<Text style={styles.textStyle}>July 20th</Text>
 						<Text style={styles.textStyle}>2018</Text>
+						<Text style={styles.textStyle}>@</Text>
+						<Text style={styles.textStyle}>Exchange LA</Text>
 					</View>
 				</View>
 				<View style={styles.venueArtistInfoStyle}>
-
+					<View style={styles.style2}>
+						<Text>One</Text>
+					</View>
+					<View style={styles.style2}>
+						<Text>Two</Text>
+					</View>
 				</View>
 				<TouchableOpacity style={styles.buttonStyle} onPress={() => Linking.openURL(buyTicketsTestURL)}>
 					<Text style={{color: "#fff"}}>Buy Tickets</Text>
@@ -85,9 +88,13 @@ class ArtistInfoScreen extends Component {
 		); 
 	}
 }
-// background-image: linear-gradient(to right bottom, #010812, #222246, #67286b, #b90e6e, #fe0b4c);
 
 const styles = StyleSheet.create({
+	style2: {
+		height: '50%',
+		width: '100%',
+		backgroundColor: 'red'
+	},
 	container: {
 		flex: 1,
 		backgroundColor: 'black'
@@ -114,7 +121,7 @@ const styles = StyleSheet.create({
 	},
 	venueArtistInfoStyle: {
 		height: '50%', 
-		flexDirection: 'row',
+		flexDirection: 'column',
 		justifyContent: 'space-between',
 		margin: 10,
 		borderWidth: 2,

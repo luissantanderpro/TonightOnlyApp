@@ -4,8 +4,9 @@ import React                      from 'react';
 import { StyleSheet, Text, View, YellowBox } from 'react-native';
 import { createStackNavigator }   from 'react-navigation'; 
 
+// Disables isMounted Warning 
+// -------------------------------------------------
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
-
 
 // Imported Screens to Be Used by React Native Navigation 
 // -------------------------------------------------
@@ -16,6 +17,7 @@ import EventVenueInfoScreen from './containers/EventVenueInfoScreen';
 import VenueInfoScreen      from './containers/VenueInfoScreen'; 
 import ArtistInfoScreen     from './containers/ArtistInfoScreen'; 
 
+// --------------------------------------------------
 export default class App extends React.Component {
   render() {
 
