@@ -16,6 +16,7 @@ class EventsCardCalendar extends Component {
 					key={i}
 					title={event} 
 					titleStyle={{fontSize: 13}} 
+					onPress={() => this.props.onEventButtonPress(this.props.eventMonthIndex, i)}
 					onPressRightIcon={() => this.props.onEventButtonPress(this.props.eventMonthIndex, i)}
 				/>
 			);

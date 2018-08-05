@@ -8,9 +8,16 @@ import { View,
 		 StyleSheet,
 		 Dimensions,
 		 ScrollView }         from 'react-native'; 
+import { connect }            from 'react-redux'; 
 import { Card,
 		 List,
 		 ListItem } 		  from 'react-native-elements'; 
+import LinearGradient         from 'react-native-linear-gradient';
+// -------------------------------------------------
+// Import Actions from Store 
+import { fetchAllEvents }     from '../store/actions'; 
+
+
 // -------------------------------------------------
 // Imported Components  
 // --------
@@ -46,15 +53,24 @@ class AllEventsScreen extends Component {
 		}
 	})
 
+	constructor(props) {
+		super(props);
+	}
+
+	componentDidMount() {
+		this.props.loadAllEvents();
+	}
+
 	// Navigates to the EventVenueInfoScreen 
 	onEventButtonPress = (eventIndex, event) => {
+
+		console.log(eventIndex, event);
 		const { navigate } = this.props.navigation; 
 		navigate('eventInfo', { eventIndex, event });
 	}
 
 	render() {
-		// Pass the listOfEvent to render Device Tags 
-		const events = listOfEvents.map((item, i) => {
+		const events = this.props.events.map((item, i) => {
 			return (
 				<EventsCardComponent 
 					key={i}
@@ -66,20 +82,37 @@ class AllEventsScreen extends Component {
 		});
 		
 		return (
-			<ScrollView style={styles.container}>
-				{ events }
-			</ScrollView>
+			<LinearGradient 
+			colors={['#010812', '#222246', '#67286b', '#b90e6e', '#fe0b4c']} 
+			start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
+			style={ styles.container } >
+				<ScrollView style={styles.container}>
+					{ events }
+				</ScrollView>
+			</LinearGradient>
 		); 
 	}
 }
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		backgroundColor: 'purple' // Temperory color must delete 
+		flex: 1
 	}
 });
 
+// Map State To Props from Store 
+// -------------------
+const mapStateToProps = state => {
+	return {
+		events: state.events
+	}
+}
+
+const mapDispatchToProps = dispatch => {
+	return {
+		loadAllEvents: () => dispatch(fetchAllEvents()) 
+	}
+}
 
 
-export default AllEventsScreen; 
+export default connect(mapStateToProps, mapDispatchToProps)(AllEventsScreen);  

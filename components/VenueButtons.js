@@ -4,7 +4,7 @@ import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 // Button Controls for the Venue Screen but will possibly turn into UI master compenents 
 const VenueButton = ({ title, func }) => (
 	<TouchableOpacity style={styles.button} onPress={() => func(title)} >
-		<Text>{title}</Text>
+		<Text>{ title }</Text>
 	</TouchableOpacity>
 ); 
 

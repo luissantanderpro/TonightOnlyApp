@@ -40,6 +40,8 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		F901F70C20F546EC00ACCC71 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F901F70920F546D000ACCC71 /* libBVLinearGradient.a */; };
 		F99BF66520F55085002A15A5 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F99BF63C20F55084002A15A5 /* FontAwesome.ttf */; };
+		F9CC6D482106F23800AA7FA7 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = F9CC6D1F2106F23700AA7FA7 /* YTPlayerView-iframe-player.html */; };
+		F9D95D622106F417001894AC /* libRCTYouTube.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D95D502106F40A001894AC /* libRCTYouTube.a */; };
 		F9E4F5EE20F330DD0080920E /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E4F5ED20F330BC0080920E /* libRNVectorIcons.a */; };
 		F9E4F5F020F331560080920E /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9E4F5EF20F331550080920E /* MaterialIcons.ttf */; };
 /* End PBXBuildFile section */
@@ -332,6 +334,13 @@
 			remoteGlobalIDString = 64AA15081EF7F30100718508;
 			remoteInfo = "BVLinearGradient-tvOS";
 		};
+		F9D95D4F2106F40A001894AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9D95D342106F40A001894AC /* RCTYouTube.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8BDB9BC91B4289AE00EF9FEF;
+			remoteInfo = RCTYouTube;
+		};
 		F9E4F5EC20F330BC0080920E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9E4F5C320F330BC0080920E /* RNVectorIcons.xcodeproj */;
@@ -370,6 +379,8 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		F901F70320F546D000ACCC71 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		F99BF63C20F55084002A15A5 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		F9CC6D1F2106F23700AA7FA7 /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "YTPlayerView-iframe-player.html"; path = "../node_modules/react-native-youtube/assets/YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
+		F9D95D342106F40A001894AC /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTYouTube.xcodeproj; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; };
 		F9E4F5C320F330BC0080920E /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		F9E4F5EF20F331550080920E /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -387,6 +398,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D95D622106F417001894AC /* libRCTYouTube.a in Frameworks */,
 				F901F70C20F546EC00ACCC71 /* libBVLinearGradient.a in Frameworks */,
 				F9E4F5EE20F330DD0080920E /* libRNVectorIcons.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
@@ -576,6 +588,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F9D95D342106F40A001894AC /* RCTYouTube.xcodeproj */,
 				F901F70320F546D000ACCC71 /* BVLinearGradient.xcodeproj */,
 				F9E4F5C320F330BC0080920E /* RNVectorIcons.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
@@ -606,6 +619,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				F9CC6D1F2106F23700AA7FA7 /* YTPlayerView-iframe-player.html */,
 				F99BF63C20F55084002A15A5 /* FontAwesome.ttf */,
 				F9E4F5EF20F331550080920E /* MaterialIcons.ttf */,
 				13B07FAE1A68108700A75B9A /* TonightOnlyApp */,
@@ -644,6 +658,14 @@
 			children = (
 				F901F70920F546D000ACCC71 /* libBVLinearGradient.a */,
 				F901F70B20F546D000ACCC71 /* libBVLinearGradient.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9D95D352106F40A001894AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9D95D502106F40A001894AC /* libRCTYouTube.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -814,6 +836,10 @@
 				{
 					ProductGroup = 139FDEE71B06529A00C62182 /* Products */;
 					ProjectRef = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+				},
+				{
+					ProductGroup = F9D95D352106F40A001894AC /* Products */;
+					ProjectRef = F9D95D342106F40A001894AC /* RCTYouTube.xcodeproj */;
 				},
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
@@ -1108,6 +1134,13 @@
 			remoteRef = F901F70A20F546D000ACCC71 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F9D95D502106F40A001894AC /* libRCTYouTube.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTYouTube.a;
+			remoteRef = F9D95D4F2106F40A001894AC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F9E4F5ED20F330BC0080920E /* libRNVectorIcons.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1133,6 +1166,7 @@
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				F9E4F5F020F331560080920E /* MaterialIcons.ttf in Resources */,
 				F99BF66520F55085002A15A5 /* FontAwesome.ttf in Resources */,
+				F9CC6D482106F23800AA7FA7 /* YTPlayerView-iframe-player.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

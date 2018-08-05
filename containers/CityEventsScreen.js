@@ -16,6 +16,9 @@ import LinearGradient          from 'react-native-linear-gradient';
 // Get the Device Screen Dimensions 
 const SCREEN_WIDTH = Dimensions.get('window').width; 
 
+// Import Application Data 
+import venueDataArray from '../application_data/venueData';
+
 
 ////////////////////////////////////////////////////////////////////////////////////////
 // Code used for testing until we can establish backend stuff 
@@ -25,12 +28,6 @@ const tempImages = [
 	'https://placeimg.com/640/640/nature'
 ]
 // Test Array 
-const tempTestArray = [{one: 1, two: 2}, {one: 3, two: 4}, {one: 5, two: 6}, {one: 7, two: 8}, {one: 9, two: 10}];
-const tempVenueImages = [
-	require('../assets/exla.jpg'),
-	require('../assets/academyla.jpeg') 
-]
-
 
 const tempArtistImages = [
 	require('../assets/artist1.jpg'),
@@ -56,29 +53,38 @@ class CityEventsScreen extends Component {
 	}
 
 	// Navigate to Either Venue Info or Artist in Town 
-	onButtonTilePress = (choice) => {
+	onButtonTilePress = (choice, venueData) => {
+
 		const { navigate } = this.props.navigation; 
+
+		console.log(venueData);
 
 		if (choice === 'Artist')
 			navigate('artistInfo');
 		else
-			navigate('venueInfo'); 
+			navigate('venueInfo', {venueId: venueData.venueId, venueName: venueData.venueName}); 
 	}
 
 	// Render Each Individual Venue Tile 
-	renderIndivdualVenueTile = () => {
-		return tempTestArray.map((item, i) => {
-			return (
-				<View key={i} style={styles.scrollViewIndividualContainer}>
-					<TouchableOpacity style={styles.scrollTileLeft} onPress={() => this.onButtonTilePress('Venue')}>
-						<Image source={tempVenueImages[ 0 ]} style={{width: '100%', height: '100%'}}/>
-					</TouchableOpacity>
-					<TouchableOpacity style={styles.scrollTileRight}>
-						<Image source={tempVenueImages[ 1 ]} style={{width: '100%', height: '100%'}}/>
-					</TouchableOpacity>
+	renderIndivdualVenueTile = (tile1, tile2) => {
+		const arrayOfContainers = []; 
+
+		for (let i = 0; i < venueDataArray.length; i += 2) {
+			const jsx = (
+				<View style={styles.scrollViewIndividualContainer} key={i}>
+					<TouchableOpacity venueId={venueDataArray[ i ].venueId} style={styles.scrollTileLeft} onPress={() => this.onButtonTilePress('Venue', venueDataArray[ i ])}>
+		 				<Image source={venueDataArray[ i ].venueLogo} style={{width: '100%', height: '100%'}}/>
+					</TouchableOpacity>	
+					<TouchableOpacity venueId={venueDataArray[ i + 1 ].venueId} style={styles.scrollTileRight} onPress={() => this.onButtonTilePress('Venue', venueDataArray[ i + 1 ])}>
+		 				<Image source={venueDataArray[ i + 1 ].venueLogo} style={{width: '100%', height: '100%'}}/>
+					</TouchableOpacity>			
 				</View>
-			);
-		});
+			); 
+
+			arrayOfContainers.push(jsx);
+		}
+
+		return arrayOfContainers;
 	}
 
 	// Render Each Individual Whos In Town Tile 
@@ -102,7 +108,7 @@ class CityEventsScreen extends Component {
 		if (this.state.venueArtistToggle)
 			return this.renderIndivdualArtistTile(); 
 		else
-			return this.renderIndivdualVenueTile(); 
+			return this.renderIndivdualVenueTile();
 	}
 
 	// Tile Selection 
@@ -125,9 +131,9 @@ class CityEventsScreen extends Component {
 					<TouchableOpacity style={styles.venueArtistButtonLeft} onPress={() => this.onSelectionButtonPress(false)}>
 						<Text>Venues</Text>
 					</TouchableOpacity>
-					<TouchableOpacity style={styles.venueArtistButtonRight} onPress={() => this.onSelectionButtonPress(true)}>
+{/*					<TouchableOpacity style={styles.venueArtistButtonRight} onPress={() => this.onSelectionButtonPress(true)}>
 						<Text>Whos in Town</Text>
-					</TouchableOpacity>
+					</TouchableOpacity>*/}
 				</View>
 				<ScrollView style={styles.scrollViewTilesContainer}>
 					{ tiles }
@@ -177,7 +183,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'center',
-		marginBottom: 5 
+		marginBottom: 5
 	},
 	scrollTileLeft: {
 		height: 100,

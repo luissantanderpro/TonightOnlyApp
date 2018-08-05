@@ -1,0 +1,5 @@
+
+
+export const FETCH_ALL_EVENTS   = 'FETCH_ALL_EVENTS'; 
+export const FETCH_VENUE_EVENTS = 'FETCH_VENUE_EVENTS'; 
+export const FETCH_VENUE_INFO 	= 'FETCH_VENUE_INFO'; 

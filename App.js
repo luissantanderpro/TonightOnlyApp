@@ -1,12 +1,19 @@
 // Imported Modules 
 // -------------------------------------------------
 import React                      from 'react';
-import { StyleSheet, Text, View, YellowBox } from 'react-native';
-import { createStackNavigator }   from 'react-navigation'; 
+import { StyleSheet, 
+         Text, 
+         View, YellowBox }      from 'react-native';
+import { createStackNavigator } from 'react-navigation'; 
+import { Provider }             from 'react-redux'; 
 
 // Disables isMounted Warning 
 // -------------------------------------------------
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
+// Import Redux Store 
+// -------------------------------------------------
+import store                from './store'; 
 
 // Imported Screens to Be Used by React Native Navigation 
 // -------------------------------------------------
@@ -32,6 +39,10 @@ export default class App extends React.Component {
     });
 
     // Render the main Navigator to navigate between screens 
-    return <MainNavigator />;
+    return ( 
+        <Provider store={store}>
+            <MainNavigator />
+        </Provider>
+    );
   }
 }

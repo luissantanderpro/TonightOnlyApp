@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		W5eRWEn3QY0z2S8QthX0CwIYi/s=
+		F4A+5+zooWvlOwqpA5QTztLzZlw=
 		</data>
 		<key>FontAwesome.ttf</key>
 		<data>
@@ -71,7 +71,7 @@
 		</data>
 		<key>PlugIns/TonightOnlyAppTests.xctest.dSYM/Contents/Resources/DWARF/TonightOnlyAppTests</key>
 		<data>
-		8dWbTDpfkYABcH+ZGl6UONrJtlg=
+		+NP7oYBBanPEQBlwHHc2dISN4hY=
 		</data>
 		<key>PlugIns/TonightOnlyAppTests.xctest/Info.plist</key>
 		<data>
@@ -79,11 +79,15 @@
 		</data>
 		<key>PlugIns/TonightOnlyAppTests.xctest/TonightOnlyAppTests</key>
 		<data>
-		4Xis9Nb/4DSgPl0R91n8W5hm9YM=
+		XS4gergyoFU+aFKbjDZn/uBslHE=
 		</data>
 		<key>PlugIns/TonightOnlyAppTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
 		gZVwYuoVHGda8DQjxE2FfRt/NhQ=
+		</data>
+		<key>YTPlayerView-iframe-player.html</key>
+		<data>
+		xLKgsb7KF0sjInmKmX76/eXUijw=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -92,11 +96,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			W5eRWEn3QY0z2S8QthX0CwIYi/s=
+			F4A+5+zooWvlOwqpA5QTztLzZlw=
 			</data>
 			<key>hash2</key>
 			<data>
-			t+FKh9DbQ1injRawAwSsoIyJq9w04dqGlySKlAo7G2U=
+			bud1zxeklnbFfj/KTI6HYNxIxfu+FRVl/4CDL9OH3EY=
 			</data>
 		</dict>
 		<key>FontAwesome.ttf</key>
@@ -237,11 +241,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8dWbTDpfkYABcH+ZGl6UONrJtlg=
+			+NP7oYBBanPEQBlwHHc2dISN4hY=
 			</data>
 			<key>hash2</key>
 			<data>
-			+wEI0OjldSAdOVWqoOGjKcX6fuXRIZWRy0F1TPSyIrY=
+			xSzLW9aAAhDkXFZDQHVETz1BUAwIgoTkBSwB0QXd4yQ=
 			</data>
 		</dict>
 		<key>PlugIns/TonightOnlyAppTests.xctest/Info.plist</key>
@@ -259,11 +263,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4Xis9Nb/4DSgPl0R91n8W5hm9YM=
+			XS4gergyoFU+aFKbjDZn/uBslHE=
 			</data>
 			<key>hash2</key>
 			<data>
-			to31Fbl/7g2+sJWfTebFKWrgTTLEonoEJg8Zxhdo4vg=
+			CBd/sRosBigRRZL4IWbdkb0GH9y8tUgF6QbGPWdCCUo=
 			</data>
 		</dict>
 		<key>PlugIns/TonightOnlyAppTests.xctest/_CodeSignature/CodeResources</key>
@@ -275,6 +279,17 @@
 			<key>hash2</key>
 			<data>
 			B67HEGFqxUegw4zrgfJ1mVUcI+3RgJWmptMntZCWc0E=
+			</data>
+		</dict>
+		<key>YTPlayerView-iframe-player.html</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xLKgsb7KF0sjInmKmX76/eXUijw=
+			</data>
+			<key>hash2</key>
+			<data>
+			YYIKV86guJfKjDhcZZxc0K9Q6NbnGO2WcOOwvcY7e/E=
 			</data>
 		</dict>
 	</dict>

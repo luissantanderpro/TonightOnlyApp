@@ -6,14 +6,19 @@ import { View,
 		 StyleSheet, 
 		 Dimensions,
 		 ScrollView,
-		 TouchableOpacity } from 'react-native'; 
+		 TouchableOpacity }       from 'react-native'; 
 import ImageSlider                from 'react-native-image-slider';
 import LinearGradient             from 'react-native-linear-gradient';
+import { connect }                from 'react-redux'; 
 import { Card,
 		 List,
 		 ListItem }				  from 'react-native-elements';
 import { Icon }					  from 'react-native-elements';  
+// -------------------------------------------------
+// Import Actions from Store 
+import { fetchAllSelectedVenueEvents }     from '../store/actions'; 
 
+// Get the specific device width 
 const SCREEN_WIDTH = Dimensions.get('window').width; 
 
 const events = [
@@ -22,50 +27,42 @@ const events = [
 	require('../assets/events3.png')
 ]
 
-// Testing 
-// --------
-const listOfEvents = [{month: 'August 2018', 
- 					   events: ['Aug. 4th - Excision',
- 					   		  'Aug. 10th  | Timmy Trumpet at Academy LA',
- 					   		  'Aug. 11th  | Borgeous at Exchange LA'
- 					   		  ]
- 					   },
- 					   {
- 					   	month: 'September 2018',
- 					   	events: [ 'Sept. 1st – Ookay at the Fonda Theatre',
- 					   			'Sept. 2nd – Nervo at Academy LA',
- 					   			'Sept. 14th – Nocturnal Wonderland 2018 at Glen Helen Regional Park'
- 					    ]}
- 					 ];
-
-const testVenueInfo = {
-	address: '618 S Spring St, Los Angeles, CA 90014',
-	phone: '(213) 627-8070'
-}
-
 // --------
 import EventsCardComponent from '../components/UI/EventsCardComponent'; 
 import VenueButtons from        '../components/VenueButtons'; 
 
 class VenueInfoScreen extends Component {
-	static navigationOptions = {
-		title: 'Exchange LA',
+	static navigationOptions = ({ navigation }) => ({
+		title: navigation.getParam('venueName'),
 		headerStyle: {
 			backgroundColor: 'black'
 		},
 		headerTitleStyle: {
 			color: '#fff'
 		}
-	};
+	})
 
 	state = {
 		displayChoice: 'Events'
 	}
 
+	constructor(props) {
+		super(props); 
+
+		const { venueId } = this.props.navigation.state.params; 
+
+		this.props.loadVenueEvents(venueId); 
+	} 
+
 	// Displays Events from Aggreageted Data 
 	displayVenueEvents = () => {
-		return listOfEvents.map((month, i) => {
 
+		// If no events were returned error check return null 
+		if (!this.props.events) {
+			return null;
+		}
+		
+		return this.props.events.map((month, i) => {
 				const shows = month.events.map((event, j) => {
 					return (
 						<ListItem 
@@ -79,7 +76,7 @@ class VenueInfoScreen extends Component {
 				return (
 					<View key={i}>
 						<View style={styles.monthHeader} >
-							<Text>{ month.month }</Text>
+							<Text>{ month.eventMonth }</Text>
 						</View>
 						<List>
 							{ shows }
@@ -91,14 +88,17 @@ class VenueInfoScreen extends Component {
 
 	// Displays to the user the venues address and contact info. 
 	displayVenueInfo = () => {
+
+		const { venueAddress, venuePhone } = this.props.venueInfo; 
+
 		return (
 			<View>
 				<View style={styles.monthHeader}>
 					<Text>Venue Contact Information</Text>
 				</View>
 				<View style={styles.infoStyling}>
-					<Text>Address: {testVenueInfo.address}</Text>
-					<Text>Phone: {testVenueInfo.phone}</Text>
+					<Text>Address: {venueAddress}</Text>
+					<Text>Phone: {venuePhone}</Text>
 				</View>
 			</View>
 
@@ -173,7 +173,7 @@ class VenueInfoScreen extends Component {
 		}
 	}
 
-	// Changes the display of each individual field 
+	// Changes the display of each individual field.
 	changeDisplayChoiceField = (choice) => {
 		this.setState({displayChoice: choice});
 	}
@@ -252,12 +252,25 @@ const styles = StyleSheet.create({
 	}
 });
 
+// Connect to Redux Store 
+// -------------------------
+// Map State To Props from Store 
+// -------------------
+const mapStateToProps = state => {
+	return {
+		events: state.venueEvents,
+		venueInfo: state.venueInfo
+	};
+};
+
+const mapDispatchToProps = dispatch => {
+	return {
+		loadVenueEvents: (venueId) => dispatch(fetchAllSelectedVenueEvents(venueId)) 
+	};
+};
 
 
-export default VenueInfoScreen; 
-
-
-
+export default connect(mapStateToProps, mapDispatchToProps)(VenueInfoScreen); 
 
 
 

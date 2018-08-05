@@ -12,6 +12,9 @@ import { View,
 import ImageSlider             from 'react-native-image-slider';
 import LinearGradient          from 'react-native-linear-gradient';
 import { Icon }				   from 'react-native-elements'; 
+import YouTube 				   from 'react-native-youtube'; 
+
+const YOUTUBEAPIKEY = 'AIzaSyA6DVweZw0svdjydJS9mYqWBvFU3BbUVBM'; 
 
 const SCREEN_WIDTH = Dimensions.get('window').width; 
 
@@ -75,10 +78,25 @@ class ArtistInfoScreen extends Component {
 				</View>
 				<View style={styles.venueArtistInfoStyle}>
 					<View style={styles.style2}>
-						<Text>One</Text>
+						<Text style={{fontSize: 35, color: 'white'}}>Artist Bio</Text>
+						<Text style={{fontSize: 12, color: 'white'}}>Jeff Abel, better known by his stage name Excision, is a Canadian producer and DJ. He frequently works with fellow Canadian dubstep producers Datsik and Downlink, along with producer Dion Timmer, hailing from the Netherlands.</Text>
 					</View>
 					<View style={styles.style2}>
-						<Text>Two</Text>
+						
+					<YouTube
+					  apiKey={YOUTUBEAPIKEY}
+					  videoId ="FcuMd_N7mmA"   // The YouTube video ID
+					  play={true}             // control playback of video with true/false
+					  fullscreen={false}       // control whether the video should play in fullscreen or inline
+					  loop={true}             // control whether the video should loop when ended
+
+					  onReady={e => this.setState({ isReady: true })}
+					  onChangeState={e => this.setState({ status: e.state })}
+					  onChangeQuality={e => this.setState({ quality: e.quality })}
+					  onError={e => this.setState({ error: e.error })}
+
+					  style={{ alignSelf: 'stretch', height: '100%' }}
+					/>
 					</View>
 				</View>
 				<TouchableOpacity style={styles.buttonStyle} onPress={() => Linking.openURL(buyTicketsTestURL)}>
@@ -93,7 +111,8 @@ const styles = StyleSheet.create({
 	style2: {
 		height: '50%',
 		width: '100%',
-		backgroundColor: 'red'
+		backgroundColor: 'black',
+		padding: 5
 	},
 	container: {
 		flex: 1,
